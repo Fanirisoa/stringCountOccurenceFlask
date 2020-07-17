@@ -4,7 +4,10 @@ import os
 import argparse
 from sparseArray import *
 from flask import Flask
-from flask_restplus import Api, Resource
+
+app = Flask(__name__)
+
+@app.route('/')
 
 def parse_arguments():
     
@@ -15,7 +18,8 @@ def parse_arguments():
     
     return parser.parse_args()
 
-    
+def index():
+    return "Hello world !"
 
 if __name__ == '__main__':
     varString =  os.environ['MY_STRINGS']
@@ -27,3 +31,5 @@ if __name__ == '__main__':
 
     print(stringsToQueries.matchingStringsToDic())
 
+
+    app.run()
