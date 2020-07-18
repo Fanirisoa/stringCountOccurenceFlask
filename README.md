@@ -1,30 +1,44 @@
-# String Count Occurence
+# String Count Occurence Flask
 
-stringCountOccurence is a Python project to determine for each query string how many times it occurs in the list of input strings.
+stringCountOccurenceFlask is a Python project to determine for each query string how many times it occurs in the list of input strings.
 
-## Installation
+## Getting Started
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install stringCountOccurence.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes
 
-```bash
-pip install foobar
-```
-
-## Usage
+### Prerequisites
 
 ```python
-import foobar
+import argparse
+import logging as lg
+```
+## Requirements
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+To build this project you will need [Docker][Docker Install].
+
+### How it works
+
+1. Clone the repo
+```sh
+$ git clone https://github.com/Fanirisoa/stringCountOccurence.git
+```
+2. Export the Variable to your Environment
+```shell
+$ export MY_STRINGS=" ... "
+```
+3. Export the Variable to your Environment
+```shell
+$ python3 -m  main -q  ...
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+### Example 
 
-Please make sure to update tests as appropriate.
+```shell
+$ export MY_STRINGS="blue red blue yellow blue red yellow blue red red blue"
+$ python3 -m  main -q blue red yellow green
+{'yellow': 2, 'red': 4, 'green': 0, 'blue': 5}
+```
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)# String Count Occurence
-Count the number of occurence of string inside a list of string
+
+[Docker Install]:  https://docs.docker.com/install/
+
