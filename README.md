@@ -12,9 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 import argparse
 import logging as lg
 ```
-## Requirements
 
-To build this project you will need [Docker][Docker Install].
 
 ### How it works
 
@@ -39,6 +37,9 @@ $ python3 -m  main -q blue red yellow green
 {'yellow': 2, 'red': 4, 'green': 0, 'blue': 5}
 ```
 
+###Requirements
+
+To build this project you will need [Docker][Docker Install].
 
 [Docker Install]:  https://docs.docker.com/install/
 
